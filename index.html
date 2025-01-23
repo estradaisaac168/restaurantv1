@@ -6,13 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant</title>
     <link rel="stylesheet" href="./css/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 </head>
 
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-complement py-3 sticky-top" aria-label="Barra de navegacion">
         <div class="container">
             <a class="navbar-brand" href="#">Navbar</a>
@@ -35,7 +50,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
+                        <a class="nav-link" href="#contact">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -43,19 +58,75 @@
     </nav>
 
 
+    <!-- header -->
     <header class="header">
         <div class="container">
             <div class="hero d-flex flex-column align-items-center justify-content-center">
-                <h1 class="display-1 text-center text-white">Titulo</h1>
+                <h1 class="display-1 text-center text-white text-uppercase">Casa de hamburguesa</h1>
                 <p class="lead text-center text-white">Lorem, ipsum dolor sit ameut possimus vndis qui mourum doloribus
                     repellendus.</p>
-                <a href="/" class="btn btn-lg btn-complement">Ver menu</a>
+                <a href="#menu" class="btn btn-lg btn-complement">Ver menu</a>
             </div>
         </div>
     </header>
 
 
-    <section class="why pt-5 mt-5 ">
+    <!-- Welcome -->
+    <section id="about" class="section welcome py-5 my-5 ">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2 g-4">
+                <div class="col">
+                    <div class="title-section d-flex flex-column align-items-start justify-content-center h-100"
+                        data-aos="fade-right">
+                        <h3 class="text-primary text-start m-0">Bienvenidos</h3>
+                        <h2 class="display-5 my-4 text-start">Un lugar en donde disfrutar con la familia</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi quod magni quos magnam,
+                            repellat suscipit ex labore illum quis enim veritatis officiis, nihil officia ipsam
+                            perspiciatis laboriosam, ipsum totam accusantium.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="./img/welcome.jpg" class="img-fluid rounded h-100" alt="Image" data-aos="fade-left">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Offer -->
+    <section class="section offer bg-secondary p-5">
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <div
+                        class="content d-flex flex-column justify-content-center align-items-center align-items-lg-start h-100 p-5">
+                        <h2 class="text-white text-center text-md-start display-3 m-0">Combo de locura</h2>
+                        <p class="lead fs-3 fw-bold text-white text-center text-md-start my-4 my-lg-3">Hamburguesa
+                            gigante + Papas + Soda</p>
+
+                        <a href="https://wa.me/78191241?text=Quiero%20la%20promocion"
+                            target="_blank" aria-label="Chat en WhatsApp"
+                            class="btn btn-lg btn-complement align-self-lg-start mb-3 mb-md-0">Ordenar ahora</a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center h-100 pt-0 pt-md-5 px-5 pb-5">
+                        <!-- <span class="fw-bold display-1 text-white p-5 bg-complement rounded-circle">$ 5</span> -->
+                        <img src="./img/price.png" class="img-fluid" alt="Image">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Why -->
+    <!-- <section class="section why pt-5 mt-5 ">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3 g-0">
                 <div class="col bg-complement">
@@ -78,52 +149,54 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
-    <section class="section py-5 mb-5">
+    <!-- Menu -->
+    <section id="menu" class="section menu py-5 mb-5">
         <div class="container">
-
             <div class="title-section">
-                <h2 class="display-3 my-5 text-center">Menu</h2>
-                <div class="icon-decoration my-5 d-flex justify-content-center">
+                <h2 class="display-3 my-5 text-start">Menu</h2>
+                <!-- <div class="icon-decoration my-5 d-flex justify-content-center">
                     <i class="fs-1 text-complement fas fa-utensils"></i>
-                </div>
+                </div> -->
             </div>
 
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
                 <div class="col">
-                    <div class="card position-relative overflow-hidden">
+                    <div class="card position-relative overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
                         <img src="./img/hamburger.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
                         <div class="card-overlay d-flex flex-column justify-content-end text-start p-4">
-                            <h5 class="fs-1 card-title text-white fw-bold">Hamburguesas</h5>
+                            <h5 class="fs-1 card-title text-white">Hamburguesas</h5>
                             <p class="card-text text-white">Una deliciosa hamburguesa con ingredientes frescos y de
                                 primera
                                 calidad.</p>
-                            <a href="#" class="btn btn-primary btn-lg align-self-start text-uppercase">Ver Menu</a>
+                            <a href="./hamburger.html"
+                                class="btn btn-primary btn-lg align-self-start text-uppercase">Ver Menu</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card position-relative overflow-hidden">
+                    <div class="card position-relative overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
                         <img src="./img/tacos.png" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
                         <div class="card-overlay d-flex flex-column justify-content-end text-start p-4">
-                            <h5 class="fs-1 card-title text-white fw-bold">Tacos</h5>
+                            <h5 class="fs-1 card-title text-white">Tacos</h5>
                             <p class="card-text text-white">Una deliciosa hamburguesa con ingredientes frescos y de
                                 primera
                                 calidad.</p>
-                            <a href="#" class="btn btn-primary btn-lg align-self-start text-uppercase">Ver Menu</a>
+                            <a href="./tacos.html" class="btn btn-primary btn-lg align-self-start text-uppercase">Ver
+                                Menu</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card position-relative overflow-hidden">
+                    <div class="card position-relative overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
                         <img src="./img/pancakes.png" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
                         <div class="card-overlay d-flex flex-column justify-content-end text-start p-4">
-                            <h5 class="fs-1 card-title text-white fw-bold">Postres</h5>
+                            <h5 class="fs-1 card-title text-white">Postres</h5>
                             <p class="card-text text-white">Una deliciosa hamburguesa con ingredientes frescos y de
                                 primera
                                 calidad.</p>
@@ -133,10 +206,10 @@
                 </div>
 
                 <div class="col">
-                    <div class="card position-relative overflow-hidden">
+                    <div class="card position-relative overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
                         <img src="./img/bebida.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
                         <div class="card-overlay d-flex flex-column justify-content-end text-start p-4">
-                            <h5 class="fs-1 card-title text-white fw-bold">Bebidas</h5>
+                            <h5 class="fs-1 card-title text-white">Bebidas</h5>
                             <p class="card-text text-white">Una deliciosa hamburguesa con ingredientes frescos y de
                                 primera
                                 calidad.</p>
@@ -149,18 +222,10 @@
     </section>
 
 
-    <section class="section py-5 mt-5 bg-secondary">
-
-        <div class="container">
-            <h2 class="text-white text-center display-3">Alguna Promosion</h2>
-        </div>
-
-    </section>
-
-
-    <section class="section gallery py-5my-5">
+    <!-- Gallery -->
+    <section class="section gallery py-5 my-5">
         <div class="container-fluid p-0">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-0">
+            <div class="row row-cols-2 row-cols-md-4 g-0">
                 <div class="col">
                     <img src="./img/tacos2.jpg" class="img-fluid object-fit" alt="Imagen">
                 </div>
@@ -178,24 +243,68 @@
     </section>
 
 
+    <!-- <section class="parallax-section my-5">
+        <div
+            class="parallax-overlay d-flex flex-column justify-content-center align-items-center text-white text-center">
+            <h2 class="display-3 fw-bold text-white">Nuestra Historia</h2>
+            <p class="lead text-white">Descubre cómo combinamos lujo y velocidad en cada plato servido.</p>
+        </div>
+    </section> -->
+
+
+    <!-- Map -->
+    <section id="contact" class="section map my-5">
+        <div class="container">
+            <div class="title-section">
+                <h2 class="display-3 my-5 text-start">Encuentranos</h2>
+                <!-- <div class="icon-decoration my-5 d-flex justify-content-center">
+                    <i class="fs-1 text-complement fas fa-utensils"></i>
+                </div> -->
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+                <div class="col">
+                    <img src="./img/location.jpg" class="img-fluid rounded h-100" alt="Image" data-aos="fade-right">
+                </div>
+
+                <div class="col">
+                    <div id="map" data-aos="fade-left"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <a href="https://wa.me/78191241?text=Deseo%20ordenar%20a%20domicilio" class="whatsapp-button" target="_blank"
+        aria-label="Chat en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <button id="backToTop" class="back-to-top" aria-label="Ir arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+
+
+    <!-- Footer -->
     <footer class="bg-secondary">
-        <div class="container pt-4 ">
-            <div
-                class="content d-flex flex-wrap flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center py-3 border-top">
+        <div class="container py-4 ">
+            <div class="row row-cols-1 row-cols-lg-2 g-4 align-items-baseline">
 
-                <p class="col-md-4 mb-0 text-white">&copy; 2024 Company, Inc</p>
+                <p class="col mb-0 text-white text-center ">&copy; 2025 Derechos reservados, Inc</p>
 
-                <a href="/"
-                    class="col-md-4 d-flex align-items-center justify-content-center my-3 my-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <!-- <a href="/" class="col d-flex align-items-center justify-content-center my-3 my-md-0 me-md-auto link-body-emphasis text-decoration-none">
                     <i class="fs-1 text-white bi bi-coin"></i>
-                </a>
+                </a> -->
 
-                <ul class="nav col-md-4 justify-content-end">
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                <ul class="nav col justify-content-center justify-content-lg-start">
+                    <p class="text-white">Diseniado por Isaac Estrada</p>
+                    <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li> -->
                 </ul>
             </div>
         </div>
@@ -204,6 +313,14 @@
 
     <script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="./js/main.js"></script>
+    <script src="./js/map.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

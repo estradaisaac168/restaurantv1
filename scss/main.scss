@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
 
 $primary: #B98B82; // Verde pino (rústico, natural)
 $complement: #F5A623; // Amarillo mostaza (calidez, contraste)
@@ -26,13 +26,18 @@ body {
     background-color: #FFF; // Fondo blanco para resaltar elegancia
 }
 
+.section {
+    overflow: hidden;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Playfair Display', serif;
+    // font-family: 'Playfair Display', serif;
+    font-family: 'Lilita One', cursive;
     color: $secondary;
     line-height: 1.3;
 }
@@ -49,9 +54,9 @@ a {
     text-decoration: none;
     transition: color 0.3s ease;
 
-    &:hover {
-        color: $primary;
-    }
+    // &:hover {
+    //     color: $primary;
+    // }
 }
 
 
@@ -63,6 +68,15 @@ a {
     height: 300px;
     min-width: 100%;
     object-fit: cover;
+}
+
+
+#map {
+    height: 300px;
+
+    @include media-breakpoint-up(md) {
+        height: 450px;
+    }
 }
 
 
@@ -116,36 +130,150 @@ a {
 
 // Why
 
-.why {
-
-}
+.why {}
 
 // End Why
 
 
 
+// Offer
 
+.offer {
 
-
-
-
-
-.card {
-    border: none;
-    height: 400px; // Altura de la tarjeta
-}
-
-.card-img-top {
-    object-fit: cover;
     height: 100%;
-    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./../img/hamburger.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .content {
+        // height: 370px;
+    }
 }
 
-.card-overlay {
+
+// End Offer
+
+
+// Menu item
+
+.menu-item {
+    .card {
+        img {
+            height: 250px;
+        }
+    }
+}
+
+// End Menu item
+
+
+// Menu
+
+.menu {
+    .card {
+        border: none;
+        height: 400px; // Altura de la tarjeta
+    }
+
+    .card-img-top {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); // Opacidad sobre la imagen
+    }
+}
+
+// End Menu
+
+
+
+
+.parallax-section {
+    position: relative;
+    height: 500px; // Altura de la sección
+    background: url('./../img/tacos2.jpg') no-repeat center center; // Reemplaza con tu imagen
+    background-attachment: fixed; // Activa el efecto parallax
+    background-size: cover; // Asegura que cubra todo el área
+    background-position: center;
+}
+
+.parallax-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); // Opacidad sobre la imagen
+    padding: 2rem; // Espaciado para texto
+}
+
+
+
+// Button WathSap
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px; // Distancia desde la parte inferior
+    right: 20px; // Distancia desde la parte izquierda
+    background-color: #25D366; // Color verde de WhatsApp
+    color: #fff; // Icono blanco
+    width: 60px; // Tamaño del botón
+    height: 60px; // Tamaño del botón
+    border-radius: 50%; // Forma redonda
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; // Tamaño del icono
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000; // Asegura que esté por encima de otros elementos
+    // transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    //transform: scale(1.1); // Efecto de zoom al pasar el mouse
+    background-color: #20c157; // Color más oscuro al pasar el mouse
+}
+
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 110px; // Distancia desde la parte inferior
+    right: 25px; // Distancia desde la parte derecha
+    width: 50px;
+    height: 50px;
+    background-color: #F5A623; // Color elegante (puedes ajustarlo)
+    color: #fff; // Color del ícono
+    border: none;
+    border-radius: 50%; // Forma redonda
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    opacity: 0; // Oculto inicialmente
+    visibility: hidden; // No es interactivo inicialmente
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1000; // Asegura que esté por encima de otros elementos
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); // Aparece suavemente
+}
+
+.back-to-top:hover {
+    background-color: #d18b20; // Color más oscuro al pasar el mouse
 }

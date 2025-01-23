@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap");
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -11383,6 +11382,10 @@ body {
   background-color: #FFF;
 }
 
+.section {
+  overflow: hidden;
+}
+
 h1, .h1,
 h2,
 .h2,
@@ -11394,7 +11397,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Playfair Display", serif;
+  font-family: "Lilita One", cursive;
   color: #2C2C2C;
   line-height: 1.3;
 }
@@ -11410,14 +11413,20 @@ a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-a:hover {
-  color: #B98B82;
-}
 
 .object-fit {
   height: 300px;
   min-width: 100%;
   object-fit: cover;
+}
+
+#map {
+  height: 300px;
+}
+@media (min-width: 768px) {
+  #map {
+    height: 450px;
+  }
 }
 
 .navbar .navbar-brand {
@@ -11444,24 +11453,105 @@ a:hover {
   height: 600px;
 }
 
-.card {
+.offer {
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./../img/hamburger.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.menu-item .card img {
+  height: 250px;
+}
+
+.menu .card {
   border: none;
   height: 400px;
 }
-
-.card-img-top {
+.menu .card-img-top {
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
-
-.card-overlay {
+.menu .card-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+}
+
+.parallax-section {
+  position: relative;
+  height: 500px;
+  background: url("./../img/tacos2.jpg") no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.whatsapp-button:hover {
+  background-color: #20c157;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 110px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: #F5A623;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: #d18b20;
 }
 
 /*# sourceMappingURL=main.css.map */

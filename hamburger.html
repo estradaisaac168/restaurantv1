@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-complement py-3 sticky-top" aria-label="Barra de navegacion">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"
+                aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample09">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre mi</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- header -->
+    <header class="bg-secondary py-5">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <h1 class="display-1 text-center text-white text-uppercase">Hamburguesas</h1>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Menu -->
+    <section id="menu-item" class="section menu-item py-5 mb-5">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./img/hamburger.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
+                        <div class="card-body">
+                            <div class=".container-fluid p-0">
+                                <div class="row">
+                                    <div class="col-8 d-flex justify-content-start">
+                                        <h6 class="fs-4 card-title text-start m-0">Hamburguesa</h6>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-transparent border-0 pt-0">
+                            <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
+                                primera calidad.</p>
+                            <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./img/hamburger.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
+                        <div class="card-body">
+                            <div class=".container-fluid p-0">
+                                <div class="row">
+                                    <div class="col-8 d-flex justify-content-start">
+                                        <h6 class="fs-4 card-title text-start m-0">Hamburguesa Wooper</h6>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-transparent border-0 pt-0">
+                            <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
+                                primera calidad.</p>
+                            <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./img/hamburger.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
+                        <div class="card-body">
+                            <div class=".container-fluid p-0">
+                                <div class="row">
+                                    <div class="col-8 d-flex justify-content-start">
+                                        <h6 class="fs-4 card-title text-start m-0">Hamburguesa Deluxe</h6>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <p class="fs-3 fw-bolder text-primary m-0">$ 10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-transparent border-0 pt-0">
+                            <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
+                                primera calidad.</p>
+                            <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./img/hamburger.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
+                        <div class="card-body">
+                            <div class=".container-fluid p-0">
+                                <div class="row">
+                                    <div class="col-8 d-flex justify-content-start">
+                                        <h6 class="fs-4 card-title text-start m-0">Hamburguesa</h6>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-transparent border-0 pt-0">
+                            <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
+                                primera calidad.</p>
+                            <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./img/hamburger.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
+                        <div class="card-body">
+                            <div class=".container-fluid p-0">
+                                <div class="row">
+                                    <div class="col-8 d-flex justify-content-start">
+                                        <h6 class="fs-4 card-title text-start m-0">Hamburguesa Wooper</h6>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-transparent border-0 pt-0">
+                            <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
+                                primera calidad.</p>
+                            <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./img/hamburger.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
+                        <div class="card-body">
+                            <div class=".container-fluid p-0">
+                                <div class="row">
+                                    <div class="col-8 d-flex justify-content-start">
+                                        <h6 class="fs-4 card-title text-start m-0">Hamburguesa Deluxe</h6>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <p class="fs-3 fw-bolder text-primary m-0">$ 10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-transparent border-0 pt-0">
+                            <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
+                                primera calidad.</p>
+                            <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <a href="https://wa.me/78191241?text=Deseo%20ordenar%20a%20domicilio" class="whatsapp-button" target="_blank"
+        aria-label="Chat en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <button id="backToTop" class="back-to-top" aria-label="Ir arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+
+    <!-- Footer -->
+    <footer class="bg-secondary">
+        <div class="container py-4 ">
+            <div class="row row-cols-1 row-cols-lg-2 g-4 align-items-baseline">
+
+                <p class="col mb-0 text-white text-center ">&copy; 2025 Derechos reservados, Inc</p>
+
+                <!-- <a href="/" class="col d-flex align-items-center justify-content-center my-3 my-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <i class="fs-1 text-white bi bi-coin"></i>
+                </a> -->
+
+                <ul class="nav col justify-content-center justify-content-lg-start">
+                    <p class="text-white">Diseniado por Isaac Estrada</p>
+                    <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/main.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
