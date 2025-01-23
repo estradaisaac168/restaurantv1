@@ -7,13 +7,81 @@
     <title>Restaurant</title>
     <link rel="stylesheet" href="./css/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 
 <body>
 
-    <section class="section py-5 my-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-complement py-3 sticky-top" aria-label="Barra de navegacion">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"
+                aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample09">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre mi</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="header">
+        <div class="container">
+            <div class="hero d-flex flex-column align-items-center justify-content-center">
+                <h1 class="display-1 text-center text-white">Titulo</h1>
+                <p class="lead text-center text-white">Lorem, ipsum dolor sit ameut possimus vndis qui mourum doloribus
+                    repellendus.</p>
+                <a href="/" class="btn btn-lg btn-complement">Ver menu</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="why pt-5 mt-5 ">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3 g-0">
+                <div class="col bg-complement">
+                    <div class="conten-why p-5 d-flex flex-column justify-content-center align-items-center ">
+                        <i class="fs-1 text-white bi bi-emoji-smile"></i>
+                        <h4 class="text-white">Calidad</h4>
+                    </div>
+                </div>
+                <div class="col bg-primary">
+                    <div class="conten-why p-5 d-flex flex-column justify-content-center align-items-center ">
+                        <i class="fs-1 text-white bi bi-emoji-smile"></i>
+                        <h4 class="text-white">Delivery</h4>
+                    </div>
+                </div>
+                <div class="col bg-secondary">
+                    <div class="conten-why p-5 d-flex flex-column justify-content-center align-items-center ">
+                        <i class="fs-1 text-white bi bi-emoji-smile"></i>
+                        <h4 class="text-white">Precio</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section py-5 mb-5">
         <div class="container">
 
             <div class="title-section">
@@ -33,7 +101,7 @@
                             <p class="card-text text-white">Una deliciosa hamburguesa con ingredientes frescos y de
                                 primera
                                 calidad.</p>
-                            <a href="#" class="btn btn-primary btn-lg align-self-start">Ordenar Ahora</a>
+                            <a href="#" class="btn btn-primary btn-lg align-self-start text-uppercase">Ver Menu</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +114,7 @@
                             <p class="card-text text-white">Una deliciosa hamburguesa con ingredientes frescos y de
                                 primera
                                 calidad.</p>
-                            <a href="#" class="btn btn-primary btn-lg align-self-start">Ordenar Ahora</a>
+                            <a href="#" class="btn btn-primary btn-lg align-self-start text-uppercase">Ver Menu</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +127,7 @@
                             <p class="card-text text-white">Una deliciosa hamburguesa con ingredientes frescos y de
                                 primera
                                 calidad.</p>
-                            <a href="#" class="btn btn-primary btn-lg align-self-start">Ordenar Ahora</a>
+                            <a href="#" class="btn btn-primary btn-lg align-self-start text-uppercase">Ver Menu</a>
                         </div>
                     </div>
                 </div>
@@ -72,13 +140,69 @@
                             <p class="card-text text-white">Una deliciosa hamburguesa con ingredientes frescos y de
                                 primera
                                 calidad.</p>
-                            <a href="#" class="btn btn-primary btn-lg align-self-start">Ordenar Ahora</a>
+                            <a href="#" class="btn btn-primary btn-lg align-self-start text-uppercase">Ver Menu</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <section class="section py-5 mt-5 bg-secondary">
+
+        <div class="container">
+            <h2 class="text-white text-center display-3">Alguna Promosion</h2>
+        </div>
+
+    </section>
+
+
+    <section class="section gallery py-5my-5">
+        <div class="container-fluid p-0">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-0">
+                <div class="col">
+                    <img src="./img/tacos2.jpg" class="img-fluid object-fit" alt="Imagen">
+                </div>
+                <div class="col">
+                    <img src="./img/shrimp.jpg" class="img-fluid object-fit" alt="Imagen">
+                </div>
+                <div class="col">
+                    <img src="./img/nachos.jpg" class="img-fluid object-fit" alt="Imagen">
+                </div>
+                <div class="col">
+                    <img src="./img/food.jpg" class="img-fluid object-fit" alt="Imagen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-secondary">
+        <div class="container pt-4 ">
+            <div
+                class="content d-flex flex-wrap flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center py-3 border-top">
+
+                <p class="col-md-4 mb-0 text-white">&copy; 2024 Company, Inc</p>
+
+                <a href="/"
+                    class="col-md-4 d-flex align-items-center justify-content-center my-3 my-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <i class="fs-1 text-white bi bi-coin"></i>
+                </a>
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
