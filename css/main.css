@@ -30,8 +30,8 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #B98B82;
-  --bs-complement: #F5A623;
-  --bs-secondary: #2C2C2C;
+  --bs-complement: rgb(245, 166, 35);
+  --bs-secondary: rgb(44, 44, 44);
   --bs-primary-rgb: 185, 139, 130;
   --bs-complement-rgb: 245, 166, 35;
   --bs-secondary-rgb: 44, 44, 44;
@@ -2975,8 +2975,8 @@ textarea.form-control-lg {
 
 .btn-complement {
   --bs-btn-color: #000;
-  --bs-btn-bg: #F5A623;
-  --bs-btn-border-color: #F5A623;
+  --bs-btn-bg: rgb(245, 166, 35);
+  --bs-btn-border-color: rgb(245, 166, 35);
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: rgb(246.5, 179.35, 68);
   --bs-btn-hover-border-color: rgb(246, 174.9, 57);
@@ -2986,14 +2986,14 @@ textarea.form-control-lg {
   --bs-btn-active-border-color: rgb(246, 174.9, 57);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #F5A623;
-  --bs-btn-disabled-border-color: #F5A623;
+  --bs-btn-disabled-bg: rgb(245, 166, 35);
+  --bs-btn-disabled-border-color: rgb(245, 166, 35);
 }
 
 .btn-secondary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #2C2C2C;
-  --bs-btn-border-color: #2C2C2C;
+  --bs-btn-bg: rgb(44, 44, 44);
+  --bs-btn-border-color: rgb(44, 44, 44);
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: rgb(37.4, 37.4, 37.4);
   --bs-btn-hover-border-color: rgb(35.2, 35.2, 35.2);
@@ -3003,8 +3003,8 @@ textarea.form-control-lg {
   --bs-btn-active-border-color: #212121;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #2C2C2C;
-  --bs-btn-disabled-border-color: #2C2C2C;
+  --bs-btn-disabled-bg: rgb(44, 44, 44);
+  --bs-btn-disabled-border-color: rgb(44, 44, 44);
 }
 
 .btn-outline-primary {
@@ -3025,36 +3025,36 @@ textarea.form-control-lg {
 }
 
 .btn-outline-complement {
-  --bs-btn-color: #F5A623;
-  --bs-btn-border-color: #F5A623;
+  --bs-btn-color: rgb(245, 166, 35);
+  --bs-btn-border-color: rgb(245, 166, 35);
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #F5A623;
-  --bs-btn-hover-border-color: #F5A623;
+  --bs-btn-hover-bg: rgb(245, 166, 35);
+  --bs-btn-hover-border-color: rgb(245, 166, 35);
   --bs-btn-focus-shadow-rgb: 245, 166, 35;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #F5A623;
-  --bs-btn-active-border-color: #F5A623;
+  --bs-btn-active-bg: rgb(245, 166, 35);
+  --bs-btn-active-border-color: rgb(245, 166, 35);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #F5A623;
+  --bs-btn-disabled-color: rgb(245, 166, 35);
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #F5A623;
+  --bs-btn-disabled-border-color: rgb(245, 166, 35);
   --bs-gradient: none;
 }
 
 .btn-outline-secondary {
-  --bs-btn-color: #2C2C2C;
-  --bs-btn-border-color: #2C2C2C;
+  --bs-btn-color: rgb(44, 44, 44);
+  --bs-btn-border-color: rgb(44, 44, 44);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #2C2C2C;
-  --bs-btn-hover-border-color: #2C2C2C;
+  --bs-btn-hover-bg: rgb(44, 44, 44);
+  --bs-btn-hover-border-color: rgb(44, 44, 44);
   --bs-btn-focus-shadow-rgb: 44, 44, 44;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #2C2C2C;
-  --bs-btn-active-border-color: #2C2C2C;
+  --bs-btn-active-bg: rgb(44, 44, 44);
+  --bs-btn-active-border-color: rgb(44, 44, 44);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #2C2C2C;
+  --bs-btn-disabled-color: rgb(44, 44, 44);
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #2C2C2C;
+  --bs-btn-disabled-border-color: rgb(44, 44, 44);
   --bs-gradient: none;
 }
 
@@ -11378,7 +11378,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #2C2C2C;
+  color: rgb(44, 44, 44);
   background-color: #FFF;
 }
 
@@ -11398,18 +11398,18 @@ h5,
 h6,
 .h6 {
   font-family: "Lilita One", cursive;
-  color: #2C2C2C;
+  color: rgb(44, 44, 44);
   line-height: 1.3;
 }
 
 p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #2C2C2C;
+  color: rgb(44, 44, 44);
 }
 
 a {
-  color: #F5A623;
+  color: rgb(245, 166, 35);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -11433,6 +11433,32 @@ a {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+@media (min-width: 992px) {
+  .w-lg-auto {
+    width: inherit;
+  }
+}
+.vibrar {
+  animation: vibrar 0.5s ease-in-out 1;
+}
+
+@keyframes vibrar {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .navbar .navbar-brand {
   font-size: 1.5em;
 }
@@ -11490,7 +11516,7 @@ a {
 }
 .menu .control {
   width: auto;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(44, 44, 44, 0.3) 0px 0px 0px 3px;
 }
 
 .parallax-section {
