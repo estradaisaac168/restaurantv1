@@ -1,643 +1,544 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<!-- <html lang="en" data-bs-theme="dark"> -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinica</title>
+  <link href='./css/main.css' rel='stylesheet'>
 
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+
+  <!-- Header -->
+  <header class="">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-complement py-3 sticky-top" aria-label="Barra de navegacion">
-        <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"
-                aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarsExample09">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre mi</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Clinica</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#our-team">Equipo</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-
-    <div class="section ">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="d-flex justify-content-center">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-hamburguesa-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-hamburguesa" type="button" role="tab"
-                                    aria-controls="pills-hamburguesa" aria-selected="true">Hamburguesa</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-tacos-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-tacos" type="button" role="tab" aria-controls="pills-tacos"
-                                    aria-selected="false">Tacos</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-bebidas-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-bebidas" type="button" role="tab"
-                                    aria-controls="pills-bebidas" aria-selected="false">Bebidas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-postres-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-postres" type="button" role="tab"
-                                    aria-controls="pills-postres" aria-selected="false">Postres</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Header -->
+    <div class="header bg-neutral ">
+      <div class="content container d-none d-lg-flex align-items-center justify-content-between ">
+        <span href="#" class="text-white m-3 fs-6 ">45 West Dental Street, Newyork 1003</span>
+        <span href="#" class="text-white m-3 fs-6 ">Supportuteam@Dentalcare.com</span>
+        <span href="#" class="text-white m-3 fs-6 ">Weekdays: 09.00am to 18.00pm</span>
+      </div>
     </div>
 
-
-    <section class="container">
-        <div class="tab-content" id="pills-tabContent">
-
-
-            <div class="tab-pane fade show active" id="pills-hamburguesa" role="tabpanel"
-                aria-labelledby="pills-hamburguesa-tab" tabindex="0">
-                <section id="menu-item" class="section menu-item py-5 mb-5">
-                    <div class="container-fluid">
-
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
-                                        alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
-                                        alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa Wooper</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
-                                        alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa Deluxe</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 10</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
-                                        alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
-                                        alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa Wooper</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
-                                        alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa Deluxe</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 10</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="tab-pane fade" id="pills-tacos" role="tabpanel" aria-labelledby="pills-tacos-tab" tabindex="0">
-                <section id="menu-item" class="section menu-item py-5 mb-5">
-                    <div class="container-fluid">
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/tacos.png" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/tacos2.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa Wooper</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/tacos.png" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa Deluxe</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 10</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/tacos2.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/tacos.png" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa Wooper</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/tacos2.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa Deluxe</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 10</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="tab-pane fade" id="pills-bebidas" role="tabpanel" aria-labelledby="pills-bebidas-tab"
-                tabindex="0">
-                <section id="menu-item" class="section menu-item py-5 mb-5">
-                    <div class="container-fluid">
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/cocacola.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Coca cola</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/cocacola.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Pepsi</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/cocacola.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Agua</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 10</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/cocacola.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Fresco natural</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/coffee.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Cafe</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 10</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="tab-pane fade" id="pills-postres" role="tabpanel" aria-labelledby="pills-postres-tab"
-                tabindex="0">
-                <section id="menu-item" class="section menu-item py-5 mb-5">
-                    <div class="container-fluid">
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/bake.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Pastel</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/desserts.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Tres leches</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col">
-                                <div class="card h-100" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="./img/pastel.jpg" class="card-img-top img-fluid" alt="Hamburguesa deliciosa">
-                                    <div class="card-body">
-                                        <div class=".container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-8 d-flex justify-content-start">
-                                                    <h6 class="fs-4 card-title text-start m-0">Pan dulce</h6>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <p class="fs-3 fw-bolder text-primary m-0">$ 10</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-footer bg-transparent border-0 pt-0">
-                                        <p class="card-text">Una deliciosa hamburguesa con ingredientes frescos y de
-                                            primera calidad.</p>
-                                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
+    <!-- Hero -->
+    <div class="hero bg-primary d-flex flex-column align-items-start justify-content-center">
+      <div class="container">
+        <div class="hero-content w-xs-100 w-lg-60 p-5 ">
+          <h1 class="text-white display-2">Nombre de la clinica</h1>
+          <p class="text-white lead ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, perspiciatis. A
+            sed non atque cumque maiores aliquid.</p>
+          <a href="#" class="btn btn-secondary text-uppercase">Agendar Cita</a>
         </div>
-    </section>
+      </div>
+    </div>
+
+  </header>
+
+
+  <section class="section why py-7 my-5">
+    <div class="container">
+      <div class="title mb-5">
+        <h3 class="fs-5 text-center text-uppercase mb-3 ">Comprometidos con tu salud</h3>
+        <h2 class="fs-2 text-center text-black">Cuidando vidas, creando confianza</h2>
+      </div>
+      <div class="row row-cols-1 row-cols-lg-3 g-4">
+
+        <div class="col">
+          <div class="card border border-secondary text-center h-100 ">
+            <div class="card-header mt-4 bg-white border-0">
+              <img src="./img/emergency-call.svg" alt="">
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h4 class="text-secondary">Atención Personalizada</h4>
+              </div>
+              <div class="card-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minus temporibus odit, dolorum
+                  doloribus excepturi aperiam ut saepe </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card border border-secondary text-center h-100">
+            <div class="card-header mt-4 bg-white border-0">
+              <img src="./img/tooth.svg" alt="">
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h4 class="text-secondary">Profesionales de Excelencia</h4>
+              </div>
+              <div class="card-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minus temporibus odit, dolorum
+                  doloribus excepturi aperiam ut saepe </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card border border-secondary text-center h-100">
+            <div class="card-header mt-4 bg-white border-0">
+              <img src="./img/file-medical-alt.svg" alt="">
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h4 class="text-secondary" >Tecnología Avanzada</h4>
+              </div>
+              <div class="card-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minus temporibus odit, dolorum
+                  doloribus excepturi aperiam ut saepe </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about" class="section about py-7 my-5 bg-accent">
+
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+        <div class="col order-2 order-lg-1">
+          <img src="./img/hero.webp" class="img-fluid object-fit-cover h-100 rounded" alt="">
+        </div>
+
+        <div class="col order-1 order-lg-2">
+
+          <div class="content-about p-3 d-flex flex-column align-items-start justify-content-center h-100  ">
+
+            <div class="title">
+              <h3 class="fs-5 text-start text-uppercase mb-3 ">Sobre nosotros</h3>
+              <h2 class="fs-2 text-start text-black">Somos un equipo que trabaja por tu bienestar</h2>
+            </div>
+
+            <p class="lh-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, voluptates ipsam! Minima
+              cumque optio
+              dolore quos ut non praesentium obcaecati veniam, voluptate harum. Hic, laboriosam? Et incidunt</p>
+
+            <p class="lh-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, voluptates ipsam! Minima
+              cumque optioaliquid iusto nobis atque quam, placeat cupiditate in ex mollitia
+              amet dolores quibusdam. obcaecati.</p>
+
+            <a href="#" class="btn btn-primary btn-lg align-self-start">Conocer medicos</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="services" class="section services py-7 my-5">
+    <div class="container">
+      <div class="title">
+        <h3 class="fs-5 text-center text-uppercase mb-3 ">Nuestros servicios</h3>
+        <h2 class="fs-2 text-center text-black">Contamos con servicios especializados en las siguientes areas</h2>
+      </div>
+      <div class="row">
+        <div class="col">
+          <!-- Swiper -->
+          <div class="swiper py-5 mySwiper">
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="card h-100">
+                    <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
+                        alt="Hamburguesa deliciosa">
+                    <div class="card-body">
+                        <div class=".container-fluid p-0">
+                            <div class="row">
+                                <div class="col-8 d-flex justify-content-start">
+                                    <h6 class="fs-4 card-title text-start m-0">Hamburguesa
+                                    </h6>
+                                </div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer bg-transparent border-0 pt-0">
+                        <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                            frescos y de
+                            primera calidad.</p>
+                        <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
+                    </div>
+                </div>
+              </div>
+
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="https://clinicanuestraseñoradeguadalupe.com/wp-content/uploads/2016/07/clinica4.jpg"
+                    class="card-img-top object-fit-cover " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                      the
+                      card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <img
+                    src="https://www.centromedicoescalon.com/wp-content/uploads/2022/05/Centro-Medico-Escalon-Banner.jpg"
+                    class="card-img-top object-fit-cover " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                      the
+                      card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <img
+                    src="https://www.centromedicoescalon.com/wp-content/uploads/2022/05/Centro-Medico-Escalon-Banner.jpg"
+                    class="card-img-top object-fit-cover" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                      the
+                      card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
 
 
 
-    <script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img
+                    src="https://www.centromedicoescalon.com/wp-content/uploads/2022/05/Centro-Medico-Escalon-Banner.jpg"
+                    class="card-img-top object-fit-cover" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                      the
+                      card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
 
-    <script src="./js/main.js"></script>
-    <script src="./js/map.js"></script>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        AOS.init();
-    </script>
+
+  <section class="section appointment py-7 mb-5 bg-accent">
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+        <div class="col">
+          <div class="content-about p-3 d-flex flex-column align-items-start justify-content-center h-100  ">
+            <div class="title">
+              <h3 class="fs-5 text-start text-uppercase mb-3 ">Agendar Cita</h3>
+              <h2 class="fs-2 text-start text-black">Tenemos la atencion especial para ti</h2>
+            </div>
+            <p class="lh-lg mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, voluptates ipsam!
+              Minima
+              cumque optioaliquid iusto nobis atque quam, placeat cupiditate in ex mollitia
+              amet dolores quibusdam. obcaecati veniam, voluptate harum. Hic, laboriosam? Et incidunt
+              reprehenderit eligendi sequi!</p>
+
+            <a href="#" class="btn btn-secondary btn-lg align-self-start">Agendar Cita</a>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <img src="./img/clinical2.jpg" class="img-fluid object-fit-cover h-100 rounded" alt="">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="our-team" class="section our-team py-7 my-5">
+    <div class="container">
+      <div class="title mb-5">
+        <h3 class="fs-5 text-center text-uppercase">Conoce a nuestro equipo</h3>
+        <h2 class="fs-2 text-center text-black">Expertos comprometidos con tu salud</h2>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card text-center h-100">
+            <div class="card-header bg-white border-0">
+              <img src="img/doctor.jpg" alt="Doctor 1" class="card-img-top">
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Dr. Juan Pérez</h4>
+              <p class="card-text">Especialista en cardiología con más de 10 años de experiencia.</p>
+              <div class="social-icons">
+                <a href="https://facebook.com/doctorjuan" target="_blank" class="btn btn-link"><i
+                    class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/doctorjuan" target="_blank" class="btn btn-link"><i
+                    class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/doctorjuan" target="_blank" class="btn btn-link"><i
+                    class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card text-center h-100">
+            <div class="card-header bg-white border-0">
+              <img src="img/doctor.jpg" alt="Doctor 1" class="card-img-top">
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Dra. Ana López</h4>
+              <p class="card-text">Experta en pediatría, comprometida con el cuidado de los más pequeños.</p>
+              <div class="social-icons">
+                <a href="https://facebook.com/doctorjuan" target="_blank" class="btn btn-link"><i
+                    class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/doctorjuan" target="_blank" class="btn btn-link"><i
+                    class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/doctorjuan" target="_blank" class="btn btn-link"><i
+                    class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card text-center h-100">
+            <div class="card-header bg-white border-0">
+              <img src="img/doctor.jpg" alt="Doctor 1" class="card-img-top">
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Dr. Luis Gómez</h4>
+              <p class="card-text">Cirujano general con un enfoque en procedimientos avanzados.</p>
+              <div class="social-icons">
+                <a href="https://facebook.com/doctorjuan" target="_blank" class="btn btn-link"><i
+                    class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/doctorjuan" target="_blank" class="btn btn-link"><i
+                    class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/doctorjuan" target="_blank" class="btn btn-link"><i
+                    class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="advertisement" class="advertisement section my-5">
+    <div class="background-content py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2">
+          <div class="col d-flex flex-column justify-content-center align-items-center">
+            <div class="appointment-content text-white">
+              <div class="title mb-3">
+                <h3 class="fs-5 text-start text-white text-uppercase">Dona tu sangre</h3>
+                <h2 class="fs-2 text-start text-white">Ayuda a salvar muchas vidas</h2>
+              </div>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio quisquam
+                voluptates ratione quibusdam suscipit.</p>
+            </div>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="seccion map py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="title mb-5">
+            <h3 class="fs-5 text-center text-uppercase">Visitanos</h3>
+            <h2 class="fs-2 text-center text-black">Estamos cerca de ti</h2>
+          </div>
+          <div class="map-container">
+            <!-- Integrar Google Maps aquí -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345099065!2d-122.42067988468165!3d37.77492977975912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064df12345b%3A0x1234567890abcdef!2sCl%C3%ADnica%20Ejemplo!5e0!3m2!1ses!2sxx!4v1693756432156!5m2!1ses!2sxx"
+              width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer bg-neutral text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Sección 1: Contacto -->
+        <div class="col-md-4 mb-3">
+          <h5>Contacto</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt-fill"></i> Dirección: Calle Principal 123</li>
+            <li><i class="bi bi-telephone-fill"></i> Teléfono: (123) 456-7890</li>
+            <li><i class="bi bi-envelope-fill"></i> Email: contacto@clinicadeejemplo.com</li>
+          </ul>
+        </div>
+        <!-- Sección 2: Enlaces útiles -->
+        <div class="col-md-4 mb-3">
+          <h5>Enlaces útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="#about" class="text-white text-decoration-none"><i class="bi bi-info-circle"></i> Sobre
+                nosotros</a></li>
+            <li><a href="#services" class="text-white text-decoration-none"><i class="bi bi-list-check"></i>
+                Servicios</a></li>
+            <li><a href="#contact" class="text-white text-decoration-none"><i class="bi bi-envelope"></i>
+                Contáctanos</a></li>
+          </ul>
+        </div>
+        <!-- Sección 3: Redes sociales -->
+        <div class="col-md-4 mb-3">
+          <h5>Síguenos</h5>
+          <div class="d-flex">
+            <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-3 fs-4"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-light" />
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Clínica Ejemplo. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer type="text/javascript" src="./js/main.js"></script>
+
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      grabCursor: true,
+      keyboard: {
+        enabled: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 60,
+        },
+        1400: {
+          slidesPerView: 3,
+          spaceBetween: 60,
+        },
+      },
+    });
+  </script>
+
 </body>
 
 </html>

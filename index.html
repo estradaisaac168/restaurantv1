@@ -16,6 +16,8 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
@@ -227,28 +229,33 @@
 
                 <p class="fs-2 text-uppercase text-center mb-5 ">Selecciona una categoria de nuestro delicioso menu</p>
             </div>
+
+
             <div class="row">
                 <div class="col">
-                    <div class="control rounded p-3 d-flex justify-content-center w-100 " data-aos="flip-right" data-aos-delay="500">
-                        <ul class="nav nav-pills flex-lg-nowrap flex-lg-row align-items-center justify-content-center " id="pills-tab" role="tablist">
-                            <li class="nav-item w-100 w-lg-auto " role="presentation">
-                                <button class="nav-link w-100 w-lg-auto active text-uppercase fw-bolder " id="pills-hamburguesa-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-hamburguesa" type="button" role="tab"
-                                    aria-controls="pills-hamburguesa" aria-selected="true">Hamburguesa</button>
+                    <div class="control border border-4 border-primary rounded p-3 d-flex justify-content-center w-100 " data-aos="flip-right"
+                        data-aos-delay="500">
+                        <ul class="nav nav-pills flex-lg-nowrap flex-lg-row align-items-center justify-content-center "
+                            id="pills-tab" role="tablist">
+                            <li class="nav-item " role="presentation">
+                                <button class="nav-link active text-uppercase fw-bolder "
+                                    id="pills-hamburguesa-tab" data-bs-toggle="pill" data-bs-target="#pills-hamburguesa"
+                                    type="button" role="tab" aria-controls="pills-hamburguesa"
+                                    aria-selected="true">Hamburguesa</button>
                             </li>
-                            <li class="nav-item w-100 " role="presentation">
-                                <button class="nav-link w-100 text-uppercase fw-bolder  " id="pills-tacos-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-tacos" type="button" role="tab" aria-controls="pills-tacos"
-                                    aria-selected="false">Tacos</button>
+                            <li class="nav-item  " role="presentation">
+                                <button class="nav-link  text-uppercase fw-bolder  " id="pills-tacos-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-tacos" type="button" role="tab"
+                                    aria-controls="pills-tacos" aria-selected="false">Tacos</button>
                             </li>
-                            <li class="nav-item w-100" role="presentation">
-                                <button class="nav-link w-100 text-uppercase fw-bolder " id="pills-bebidas-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-bebidas" type="button" role="tab"
+                            <li class="nav-item " role="presentation">
+                                <button class="nav-link  text-uppercase fw-bolder " id="pills-bebidas-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-bebidas" type="button" role="tab"
                                     aria-controls="pills-bebidas" aria-selected="false">Bebidas</button>
                             </li>
-                            <li class="nav-item w-100" role="presentation">
-                                <button class="nav-link w-100 text-uppercase fw-bolder " id="pills-postres-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-postres" type="button" role="tab"
+                            <li class="nav-item " role="presentation">
+                                <button class="nav-link  text-uppercase fw-bolder " id="pills-postres-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-postres" type="button" role="tab"
                                     aria-controls="pills-postres" aria-selected="false">Postres</button>
                             </li>
                         </ul>
@@ -256,7 +263,636 @@
                 </div>
             </div>
 
+            <!-- <div class="row">
+                <div class="col">
+                    <div class="control border border-4 border-primary rounded p-3 d-flex justify-content-center w-100 " data-aos="flip-right"
+                        data-aos-delay="500">
+                        <ul class="nav nav-pills flex-lg-nowrap flex-lg-row align-items-center justify-content-center "
+                            id="pills-tab" role="tablist">
+                            <li class="nav-item w-100 w-lg-auto " role="presentation">
+                                <button class="nav-link w-100 w-lg-auto active text-uppercase fw-bolder "
+                                    id="pills-hamburguesa-tab" data-bs-toggle="pill" data-bs-target="#pills-hamburguesa"
+                                    type="button" role="tab" aria-controls="pills-hamburguesa"
+                                    aria-selected="true">Hamburguesa</button>
+                            </li>
+                            <li class="nav-item w-100 " role="presentation">
+                                <button class="nav-link w-100 text-uppercase fw-bolder  " id="pills-tacos-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-tacos" type="button" role="tab"
+                                    aria-controls="pills-tacos" aria-selected="false">Tacos</button>
+                            </li>
+                            <li class="nav-item w-100" role="presentation">
+                                <button class="nav-link w-100 text-uppercase fw-bolder " id="pills-bebidas-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-bebidas" type="button" role="tab"
+                                    aria-controls="pills-bebidas" aria-selected="false">Bebidas</button>
+                            </li>
+                            <li class="nav-item w-100" role="presentation">
+                                <button class="nav-link w-100 text-uppercase fw-bolder " id="pills-postres-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-postres" type="button" role="tab"
+                                    aria-controls="pills-postres" aria-selected="false">Postres</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+
+
             <div class="row">
+                <div class="col">
+                    <div class="tab-content" id="pills-tabContent">
+
+                        <div class="tab-pane fade show active" id="pills-hamburguesa" role="tabpanel"
+                            aria-labelledby="pills-hamburguesa-tab" tabindex="0">
+
+                            <div class="swiper py-5 mySwiper">
+
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Hamburguesa
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Hamburguesa
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Hamburguesa
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Hamburguesa
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Hamburguesa
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Hamburguesa
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Hamburguesa
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/hamburger.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Hamburguesa
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-tacos" role="tabpanel" aria-labelledby="pills-tacos-tab"
+                            tabindex="0">
+                            <div class="swiper py-5 mySwiper">
+
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/tacos.png" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Tacos al Pastor
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/tacos2.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Tacos de Res
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/tacos.png" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Tacos de Birria
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/tacos2.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Tacos de Pollo
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-bebidas" role="tabpanel"
+                            aria-labelledby="pills-bebidas-tab" tabindex="0">
+                            <div class="swiper py-5 mySwiper">
+
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/bebida1.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Bebida uno
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/bebida2.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Bebida dos
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/bebida3.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Bebida tres
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/bebida1.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Bebida cuatro
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-postres" role="tabpanel"
+                            aria-labelledby="pills-postres-tab" tabindex="0">
+
+                            <div class="swiper py-5 mySwiper">
+
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/postre1.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Postre uno
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/postre2.png" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Postre dos
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/postre3.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Postre tres
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="swiper-slide px-2">
+                                        <div class="card h-100">
+                                            <img src="./img/postre1.jpg" class="card-img-top img-fluid"
+                                                alt="Hamburguesa deliciosa">
+                                            <div class="card-body">
+                                                <div class=".container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex justify-content-start">
+                                                            <h6 class="fs-4 card-title text-start m-0">Postre cuatro
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end">
+                                                            <p class="fs-3 fw-bolder text-primary m-0">$ 15</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer bg-transparent border-0 pt-0">
+                                                <p class="card-text">Una deliciosa hamburguesa con ingredientes
+                                                    frescos y de
+                                                    primera calidad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row">
                 <div class="col">
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-hamburguesa" role="tabpanel"
@@ -288,7 +924,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -315,7 +950,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -342,7 +976,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -369,7 +1002,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -396,7 +1028,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -423,7 +1054,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -460,7 +1090,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -487,7 +1116,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -514,7 +1142,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -541,7 +1168,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -568,7 +1194,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -595,7 +1220,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -632,7 +1256,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -658,7 +1281,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -684,7 +1306,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -711,7 +1332,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -738,7 +1358,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -775,7 +1394,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -802,7 +1420,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -829,7 +1446,6 @@
                                                     <p class="card-text">Una deliciosa hamburguesa con ingredientes
                                                         frescos y de
                                                         primera calidad.</p>
-                                                    <!-- <a href="#" class="btn btn-primary align-self-start text-uppercase">Ordenar</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -839,7 +1455,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -941,8 +1557,55 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+    <script defer type="text/javascript" src="./js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grabCursor: true,
+            keyboard: {
+                enabled: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
+        });
     </script>
 </body>
 
