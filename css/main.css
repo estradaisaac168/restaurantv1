@@ -11414,6 +11414,10 @@ a {
   transition: color 0.3s ease;
 }
 
+.py-7 {
+  padding: 64px 0;
+}
+
 .object-fit {
   height: 300px;
   min-width: 100%;
